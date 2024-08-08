@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    padding-bottom: 60px;
+}
+
+.app-header {
+    background-color: #3498db;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-header i {
+    margin-right: 10px;
+}
+
+.container {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center; /* Centra el texto horizontalmente */
+    display: flex;      /* Para usar flexbox */
+    justify-content: center; /* Centra el contenido dentro del elemento */
+    align-items: center; /* Centra el contenido verticalmente si el contenedor tiene altura definida */
+}
+
+
+.settings-icon {
+    width: 24px;
+    height: 24px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.probability-circle {
+    width: 200px;
+    height: 200px;
+    background-color: #F44336;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+    box-shadow: 0 0 15px rgba(255,0,0,0.3);
+}
+
+.probability {
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+}
+
+.description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.section {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.section-title i {
+    margin-right: 10px;
+    color: #4CAF50;
+}
+
+.section-content {
+    color: #666;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-item {
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+}
+
+.nav-item i {
+    font-size: 24px;
+    margin-bottom: 4px;
+}

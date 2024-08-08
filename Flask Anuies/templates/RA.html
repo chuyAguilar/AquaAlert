@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquAlert - Vista RA</title>
+    <link rel="stylesheet" href="../static/css/RA.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <script>
+        function navigateTo(element) {
+            const url = element.getAttribute('data-url');
+            window.location.href = url;
+        }
+    </script>
+    
+</head>
+<body>
+    <div class="app-header">
+        <i class="fas fa-tint"></i>
+        AquAlert
+    </div>
+    <div class="video-container">
+        <video id="ra-video" autoplay loop muted playsinline>
+            <source src="../static/video/ra.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </div>
+    <div class="footer">
+        <div class="nav-item" data-url="{{ url_for('probabilidades.Baja') }}" onclick="navigateTo(this)">
+            <i class="fas fa-home"></i>
+            <div>Home</div>
+        </div>
+        <div class="nav-item" data-url="{{ url_for('probabilidades.Mapa') }}" onclick="navigateTo(this)">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>Maps</div>
+        </div>
+        <div class="nav-item" data-url="{{ url_for('probabilidades.RA') }}" onclick="navigateTo(this)">
+            <i class="fas fa-chart-bar"></i>
+            <div>RA</div>
+        </div>
+    </div>
+    
+</body>
+</html>

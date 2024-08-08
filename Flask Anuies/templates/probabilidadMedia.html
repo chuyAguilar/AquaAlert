@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquAlert - Nivel de Probabilidad de Inundación</title>
+    <link rel="stylesheet" href="../static/css/ProbabilidadMedia.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    
+    <script>
+        function redirectToProbabilidadAlta() {
+            window.location.href = "{{ url_for('probabilidades.Alta') }}";
+        }
+    </script>
+    <script>
+        function navigateTo(element) {
+            const url = element.getAttribute('data-url');
+            window.location.href = url;
+        }
+    </script>
+    
+</head>
+<body>
+    <div class="app-header">
+        <i class="fas fa-tint"></i>
+        AquAlert
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="title">Probabilidad de Inundacion</div>
+            
+        </div>
+        <div class="probability-circle" onclick="redirectToProbabilidadAlta()">
+            <div class="probability">56%</div>
+        </div>        
+        <div class="description">Media Probabilidad de inundacion.</div>
+        <div class="section">
+            <div class="section-title">
+                <i class="fas fa-check-circle"></i>
+                <strong>Monitorar el Clima Regularmente</strong>
+            </div>
+            <div class="section-content">
+                Revisa las actualizaciones meteorológicas cada pocas horas.
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-title">
+                <i class="fas fa-map-marker-alt"></i>
+                <strong>Revisar el Mapa de Áreas Seguras</strong>
+            </div>
+            <div class="section-content">
+                Verifica el mapa para localizar los puntos de reunión más cercanos y rutas de evacuación.
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-title">
+                <i class="fas fa-water"></i>
+                <strong>Asegurarse de que los Drenajes estén Despejados</strong>
+            </div>
+            <div class="section-content">
+                Mantén los drenajes y canales de agua despejados para evitar acumulaciones de agua.
+            </div>
+        </div>
+        
+        
+    </div>
+    <div class="footer">
+        <div class="nav-item" data-url="{{ url_for('probabilidades.Baja') }}" onclick="navigateTo(this)">
+            <i class="fas fa-home"></i>
+            <div>Home</div>
+        </div>
+        <div class="nav-item" data-url="{{ url_for('probabilidades.Mapa') }}" onclick="navigateTo(this)">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>Maps</div>
+        </div>
+        <div class="nav-item" data-url="{{ url_for('probabilidades.RA') }}" onclick="navigateTo(this)">
+            <i class="fas fa-chart-bar"></i>
+            <div>RA</div>
+        </div>
+    </div>
+    
+</body>
+</html>

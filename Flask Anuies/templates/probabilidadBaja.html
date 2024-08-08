@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquAlert - Nivel de Probabilidad de Inundación</title>
+    <link rel="stylesheet" href="../static/css/ProbabilidadBaja.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <script>
+        function redirectToProbabilidadMedia() {
+            window.location.href = "{{ url_for('probabilidades.Media') }}";
+        }
+    </script>
+    <script>
+        function navigateTo(element) {
+            const url = element.getAttribute('data-url');
+            window.location.href = url;
+        }
+    </script>
+    
+</head>
+<body>
+    <div class="app-header">
+        <i class="fas fa-tint"></i>
+        AquAlert
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="title">Probabilidad de Inundacion</div>
+            
+        </div>
+        <div class="probability-circle" onclick="redirectToProbabilidadMedia()">
+            <div class="probability">5%</div>
+        </div>
+        <div class="description">Baja Probabilidad de inundacion.</div>
+        <div class="section">
+            <div class="section-title">
+                <i class="fas fa-smile"></i>
+                <strong>Disfruta de Tu Día</strong>
+            </div>
+            <div class="section-content">
+                Aprovecha el buen clima para realizar tus actividades cotidianas sin preocupaciones.
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-title">
+                <i class="fas fa-cloud-sun"></i>
+                <strong>Verifica los Pronósticos Ocasionalmente</strong>
+            </div>
+            <div class="section-content">
+                Revisa el pronóstico del tiempo una vez al día para estar informado de cualquier cambio.
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-title">
+                <i class="fas fa-phone-alt"></i>
+                <strong>Mantén tus Canales de Comunicación Abiertos</strong>
+            </div>
+            <div class="section-content">
+                Asegúrate de que tu teléfono esté cargado y que puedas recibir notificaciones en caso de emergencias.
+            </div>
+        </div>
+        
+    </div>
+    <div class="footer">
+        <div class="nav-item" data-url="{{ url_for('probabilidades.Baja') }}" onclick="navigateTo(this)">
+            <i class="fas fa-home"></i>
+            <div>Home</div>
+        </div>
+        <div class="nav-item" data-url="{{ url_for('probabilidades.Mapa') }}" onclick="navigateTo(this)">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>Maps</div>
+        </div>
+        <div class="nav-item" data-url="{{ url_for('probabilidades.RA') }}" onclick="navigateTo(this)">
+            <i class="fas fa-chart-bar"></i>
+            <div>RA</div>
+        </div>
+    </div>
+    
+</body>
+</html>
